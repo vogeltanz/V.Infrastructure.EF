@@ -3,7 +3,7 @@ using V.Domain.Base.Entities.Abstraction;
 
 namespace V.Infrastructure.EF.Base
 {
-    public class RepositoryEF<T, TKey> : Repository<T, TKey> where T : class, IEntity<TKey>, IDisposable
+    public class RepositoryEF<T, TKey> : Repository<T, TKey>, IDisposable where T : class, IEntity<TKey>
     {
         protected DbContext dbContext;
 
